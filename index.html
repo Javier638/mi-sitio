@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .fade-in {
+      opacity: 0;
+      transition: opacity 2s;
+    }
+    .fade-in.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="fade-in">This text will fade in!</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(element => {
+        element.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>
